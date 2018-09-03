@@ -1,6 +1,8 @@
 
 cmake-win32:
 	curl https://cmake.org/files/v3.12/cmake-3.12.1-win32-x86.zip -o $(BUILDDIR)/cmake-temp.zip
+	cp -r $(BUILDDIR)/cmake-3.12.1-win32-x86/bin $(PREFIX)/bin
+	cp -r $(BUILDDIR)/cmake-3.12.1-win32-x86/share $(PREFIX)/share
 	unzip $(BUILDDIR)/cmake-temp.zip -d $(PREFIX)
 
 cmake:
