@@ -6,8 +6,8 @@ cmake-win32:
 	unzip $(BUILDDIR)/cmake-temp.zip -d $(BUILDDIR)
 	mkdir -p $(PREFIX)/bin
 	mkdir -p $(PREFIX)/share
-	cp -r $(BUILDDIR)/cmake-3.12.1-win32-x86/bin $(PREFIX)/bin
-	cp -r $(BUILDDIR)/cmake-3.12.1-win32-x86/share $(PREFIX)/share
+	cp -r $(BUILDDIR)/cmake-3.12.1-win32-x86/bin $(PREFIX)
+	cp -r $(BUILDDIR)/cmake-3.12.1-win32-x86/share $(PREFIX)
 
 cmake:
 	mkdir -p $(BUILDDIR)
