@@ -6,8 +6,6 @@
   "esy": {
     "build": [
         ["git", "submodule", "update", "--init"],
-        ["ls", "-a", "cmake/Source/kwsys"],
-        ["cp", "cmake/Source/kwsys/ProcessWin32.c", "cmake/Source/kwsys/ProcessUNIX.c"],
         ["./cmake/bootstrap", "--prefix=#{self.install}", "CC=x86_64-w64-mingw32-gcc", "CFLAGS=-DKWSYS_ENCODING_DEFAULT_CODEPAGE=CP_UTF8", "CXX=x86_64-w64-mingw32-g++", "CXXFLAGS=-static -static-libgcc -static-libstdc++ --std=c++11 -DKWSYS_ENCODING_DEFAULT_CODEPAGE=CP_UTF8"],
         ["make", "-C", "cmake"],
         ["make", "-C", "cmake",  "install"]
