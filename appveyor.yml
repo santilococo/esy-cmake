@@ -18,5 +18,6 @@ install:
 
 build_script:
     - esy build
+    - esy x cmake --version
 
 test: off

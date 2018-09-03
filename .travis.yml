@@ -9,6 +9,7 @@ install:
 - esy install
 script:
 - esy build
+- esy x cmake --version
 cache:
   timeout: 360
   directories:
