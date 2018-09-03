@@ -5,9 +5,9 @@
   "license": "MIT",
   "esy": {
     "build": [
-        ["./bootstrap", "--prefix=#{self.install}"],
-        ["make"],
-        ["make", "install"]
+        ["./cmake/bootstrap", "--prefix=#{self.install}"],
+        ["make", "-C", "cmake"],
+        ["make", "-C", "cmake",  "install"]
     ]
   },
   "dependencies": {
