@@ -5,10 +5,11 @@
   "license": "MIT",
   "esy": {
     "build": [
-        ["./bootstrap", "--prefix=#{self.install}", "CC=x86_64-w64-mingw32-gcc", "CXX=x86_64-w64-mingw32-g++"],
-        ["make"],
-        ["make", "install"]
-    ]
+        ["./cmake/bootstrap", "--prefix=#{self.install}", "CC=x86_64-w64-mingw32-gcc", "CXX=x86_64-w64-mingw32-g++"],
+        ["make", "-C", "cmake"],
+        ["make", "-C", "cmake",  "install"]
+    ],
+    "buildsInSource": true
   },
   "dependencies": {
   },
