@@ -8,7 +8,8 @@
         ["./cmake/bootstrap", "--prefix=#{self.install}"],
         ["make", "-C", "cmake"],
         ["make", "-C", "cmake",  "install"]
-    ]
+    ],
+    "buildsInSource": true
   },
   "dependencies": {
   },
