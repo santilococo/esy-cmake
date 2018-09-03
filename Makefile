@@ -4,8 +4,8 @@ cmake-win32:
 	unzip $(BUILDDIR)/cmake-temp.zip -d $(PREFIX)
 
 cmake:
-	git clone https://github.com/kitware/cmake
-	cd cmake; git checkout c4ab098
-	cd cmake; ./bootstrap --prefix=$(PREFIX)
-	cd cmake; make
-	cd cmake; make install
+	git clone https://github.com/kitware/cmake $(BUILDDIR)/cmake
+	cd $(BUILDDIR)/cmake; git checkout c4ab098
+	cd $(BUILDDIR)/cmake; ./bootstrap --prefix=$(PREFIX)
+	cd $(BUILDDIR)/cmake; make
+	cd $(BUILDDIR)/cmake; make install
