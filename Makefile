@@ -5,7 +5,8 @@ cmake-win32:
 	rm -rf cmake-temp.zip
 
 cmake:
-	git submodule update --init
+	git clone https://github.com/kitware/cmake
+	cd cmake; git checkout c4ab098
 	cd cmake; ./bootstrap --prefix=$(PREFIX)
 	cd cmake; make
 	cd cmake; make install
