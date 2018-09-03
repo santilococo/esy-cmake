@@ -1,6 +1,10 @@
 
 cmake-win32:
+	curl https://cmake.org/files/v3.12/cmake-3.12.1-win32-x86.zip -o cmake-temp.zip
+	unzip cmake-temp.zip -d $(PREFIX)
+
+cmake:
 	git submodule update --init
-	cd cmake; ./bootstrap --prefix=$(PREFIX) CC=x86_64-w64-mingw32-gcc CXX=x86_64-w64-mingw32-g++ CXXFLAGS="-static -static-libgcc -static-libstdc++ -std=c++11"
+	cd cmake; ./bootstrap --prefix=$(PREFIX)
 	cd cmake; make
 	cd cmake; make install
