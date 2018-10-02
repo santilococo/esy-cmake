@@ -1,10 +1,5 @@
-PATH=$PATH:$cur__bin
-
-echo "current bin:"
-ls -a $cur__bin
-
-if cmake --version; then
-    echo "cmake already in path, not installing."
+if cmake.exe --version; then
+    echo "cmake already in path..."
 else
     echo "cmake not available, installing."
     ROOT="$(cygpath -m /)"
@@ -17,8 +12,9 @@ else
     echo "folder: $CMAKE_FOLDER"
     echo "dirname: $CMAKE_DIRNAME"
 
+    echo "Copying to $cur__bin/cmake.exe"
     cp /usr/bin/cmake.exe $cur__bin/cmake.exe
-    cp -r $CMAKE_FOLDER $cur__share/$CMAKE_DIRNAME
 
-    /setup-x86_64.exe --root $ROOT -q --remove-packages=cmake
+    echo "Copying to $cur__share/$CMAKE_DIRNAME"
+    cp -r $CMAKE_FOLDER $cur__share/$CMAKE_DIRNAME
 fi
