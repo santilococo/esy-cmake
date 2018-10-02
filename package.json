@@ -5,7 +5,7 @@
   "license": "MIT",
   "esy": {
     "build": [
-        ["make", "#{os == 'windows' ? 'cmake-win32' : 'cmake'}", "PREFIX=#{self.install}", "BUILDDIR=#{self.target_dir}/_build"],
+        ["bash", "-c",  "#{os == 'windows' ? './build-windows.sh' : './build.sh'}"],
         ["ls", "-a", "#{self.bin}"]
     ],
     "buildsInSource": "_build"
