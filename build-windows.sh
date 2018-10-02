@@ -1,3 +1,7 @@
+PATH=$PATH:$cur__bin
+
+echo "current bin:"
+ls -a $cur__bin
 
 if cmake --version; then
     echo "cmake already in path, not installing."
