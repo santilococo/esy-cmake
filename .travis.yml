@@ -5,10 +5,11 @@ os:
 node_js:
 - '8'
 install:
-- travis_retry npm install -g esy@0.2.9
+- travis_retry npm install -g esy@0.2.11
 - esy install
 script:
 - esy build
+- esy x cmake --version
 cache:
   timeout: 360
   directories:

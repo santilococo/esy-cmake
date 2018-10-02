@@ -1,11 +1,11 @@
 {
   "name": "esy-cmake",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "CMake package for esy",
   "license": "MIT",
   "esy": {
     "build": [
-        ["make", "#{os == 'windows' ? 'cmake-win32' : 'cmake'}", "PREFIX=#{self.install}", "BUILDDIR=#{self.target_dir}/_build"],
+        ["bash", "-c",  "#{os == 'windows' ? './build-windows.sh' : './build.sh'}"],
         ["ls", "-a", "#{self.bin}"]
     ],
     "buildsInSource": "_build"
