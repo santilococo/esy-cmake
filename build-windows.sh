@@ -14,6 +14,7 @@ else
 
     echo "Copying to $cur__bin/cmake.exe"
     cp /usr/bin/cmake.exe $cur__bin/cmake.exe
+    cp /usr/bin/cygarchive-13.dll $cur__bin/cygarchive-13.dll
 
     echo "Copying to $cur__share/$CMAKE_DIRNAME"
     cp -r $CMAKE_FOLDER $cur__share/$CMAKE_DIRNAME
