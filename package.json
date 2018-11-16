@@ -1,6 +1,6 @@
 {
   "name": "esy-cmake",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "CMake package for esy",
   "license": "MIT",
   "esy": {
