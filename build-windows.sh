@@ -4,7 +4,9 @@ else
     echo "cmake not available, installing."
     ROOT="$(cygpath -m /)"
     echo "cygwin root: $ROOT"
-    /setup-x86_64.exe --root $ROOT -q --packages=cmake
+    LOCAL_PACKAGE_DIR="$(cygpath -w /var/cache/setup)"
+
+    /setup-x86_64.exe --root $ROOT -q --packages=cmake --local-package-dir $LOCAL_PACKAGE_DIR
 
     CMAKE_FOLDER="$(find /usr/share -maxdepth 1 -name cmake-*)"
     CMAKE_DIRNAME="$(basename $CMAKE_FOLDER)"
