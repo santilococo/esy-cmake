@@ -6,7 +6,7 @@ else
     echo "cygwin root: $ROOT"
     LOCAL_PACKAGE_DIR="$(cygpath -w /var/cache/setup)"
 
-    /setup-x86_64.exe --root $ROOT -q --packages=cmake --local-package-dir $LOCAL_PACKAGE_DIR
+    $ROOT/setup-x86_64.exe --root $ROOT -q --packages=cmake --local-package-dir $LOCAL_PACKAGE_DIR --site=http://cygwin.mirror.constant.com/ --verbose
 
     CMAKE_FOLDER="$(find /usr/share -maxdepth 1 -name cmake-*)"
     CMAKE_DIRNAME="$(basename $CMAKE_FOLDER)"
