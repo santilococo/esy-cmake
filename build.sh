@@ -1,16 +1,14 @@
 BUILDDIR=$cur__root/_build
 PREFIX=$cur__install
 
-if which cmake; then
-    echo "Cmake already available, not building"
-else
-    echo Using builddir: $BUILDDIR
-    echo Using prefix: $PREFIX
 
-    mkdir -p $BUILDDIR
-    git clone https://github.com/kitware/cmake $BUILDDIR/cmake
-    cd $BUILDDIR/cmake; git checkout 7700df9b1ef66761cad08cfc08344d5b27660e9f
-    cd $BUILDDIR/cmake; ./bootstrap --prefix=$PREFIX
-    cd $BUILDDIR/cmake; make
-    cd $BUILDDIR/cmake; make install
-fi
+echo Using builddir: $BUILDDIR
+echo Using prefix: $PREFIX
+
+mkdir -p $BUILDDIR
+git clone https://github.com/kitware/cmake $BUILDDIR/cmake
+cd $BUILDDIR/cmake; git checkout 7700df9b1ef66761cad08cfc08344d5b27660e9f
+cd $BUILDDIR/cmake; ./bootstrap --prefix=$PREFIX
+cd $BUILDDIR/cmake; make
+cd $BUILDDIR/cmake; make install
+
