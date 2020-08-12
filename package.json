@@ -5,8 +5,9 @@
   "license": "MIT",
   "esy": {
     "build": [
-        ["bash", "-c",  "#{os == 'windows' ? './build-windows.sh' : './build.sh'}"],
-        ["ls", "-a", "#{self.bin}"]
+        ["bash", "-c",  "./build.sh"],
+        ["ls", "-a", "#{self.bin}"],
+        ["cmake", "--version"]
     ],
     "buildsInSource": "_build"
   },
