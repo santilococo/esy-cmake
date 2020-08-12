@@ -21,6 +21,9 @@ else
     echo "Copying to $cur__share/$CMAKE_DIRNAME"
     cp -r $CMAKE_FOLDER $cur__share/$CMAKE_DIRNAME
 
-    echo "Checking cmake version:"
+    echo "Checking cmake version (/usr/bin):"
     /usr/bin/cmake.exe --version
+
+    echo "Checking cmake version (copied):"
+    $cur__bin/cmake.exe --version
 fi
