@@ -28,5 +28,5 @@ else
     echo "/usr/bin version is: $OUTPUT"
 
     echo "Checking cmake version (copied):"
-    strace $cur__bin/cmake.exe +q
+    strace $cur__bin/cmake.exe
 fi
