@@ -6,6 +6,9 @@ else
 
     CMAKE_FOLDER="C:\ProgramData\chocolatey\lib\cmake"
     ls -al $CMAKE_FOLDER
+    ls -al "C:\Program Files\CMake\bin"
+    CMAKE_FOLDER="C:\Program Files\CMake\bin"
+    ls -al "C:\ProgramFiles\CMake\bin"
     CMAKE_DIRNAME="$(basename $CMAKE_FOLDER)"
 
     echo "folder: $CMAKE_FOLDER"
