@@ -15,4 +15,10 @@ else
 
     echo "Copying to $cur__share/cmake"
     cp -r $CMAKE_FOLDER $cur__share/cmake
+    
+    OUTPUT="$($cur__bin/cmake.exe --version)"
+    echo "cmake version is: $OUTPUT"
+
+    echo "Checking cmake version (copied):"
+    strace $cur__bin/cmake.exe
 fi
