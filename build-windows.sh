@@ -2,7 +2,11 @@ if cmake.exe --version; then
     echo "cmake already in path..."
 else
     echo "cmake not available, installing."
-    choco.exe install cmake --installargs 'ADD_CMAKE_TO_PATH=User'
+    echo "$PATH"
+    echo "$(find /usr/bin -maxdepth 1 -name choco*)"
+    ls "c://ProgramData/Chocolatey"
+    ls "c://ProgramData/Chocolatey/bin"
+    c://ProgramData/Chocolatey/bin/choco.exe install cmake --installargs 'ADD_CMAKE_TO_PATH=User'
 
     CMAKE_FOLDER="$(find /usr/share -maxdepth 1 -name cmake-*)"
     CMAKE_DIRNAME="$(basename $CMAKE_FOLDER)"
