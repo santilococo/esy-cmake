@@ -2,11 +2,12 @@ if cmake.exe --version; then
     echo "cmake already in path..."
 else
     echo "cmake not available, installing."
-    ROOT="$(cygpath -m /)"
-    echo "cygwin root: $ROOT"
-    LOCAL_PACKAGE_DIR="$(cygpath -w /var/cache/setup)"
+    #ROOT="$(cygpath -m /)"
+    #echo "cygwin root: $ROOT"
+    #LOCAL_PACKAGE_DIR="$(cygpath -w /var/cache/setup)"
+    choco install cmake --installargs 'ADD_CMAKE_TO_PATH=User'
 
-    $ROOT/setup-x86_64.exe --root $ROOT -q --packages=cmake,libuv1 --local-package-dir $LOCAL_PACKAGE_DIR --site=https://mirrors.kernel.org/sourceware/cygwin/ --no-desktop --no-startmenu --no-shortcuts --verbose
+    #$ROOT/setup-x86_64.exe --root $ROOT -q --packages=cmake,libuv1 --local-package-dir $LOCAL_PACKAGE_DIR --site=https://mirrors.kernel.org/sourceware/cygwin/ --no-desktop --no-startmenu --no-shortcuts --verbose
 
     CMAKE_FOLDER="$(find /usr/share -maxdepth 1 -name cmake-*)"
     CMAKE_DIRNAME="$(basename $CMAKE_FOLDER)"
