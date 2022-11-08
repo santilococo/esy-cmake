@@ -14,7 +14,5 @@ jobs:
           
       - name: Esy setup
         run: |
-          esy install
-          esy bootstrap
-          esy build --verbosity=debug
+          bash -c build-windows.sh
           
