@@ -5,7 +5,7 @@ else
     #ROOT="$(cygpath -m /)"
     #echo "cygwin root: $ROOT"
     #LOCAL_PACKAGE_DIR="$(cygpath -w /var/cache/setup)"
-    choco install cmake --installargs 'ADD_CMAKE_TO_PATH=User'
+    choco.exe install cmake --installargs 'ADD_CMAKE_TO_PATH=User'
 
     #$ROOT/setup-x86_64.exe --root $ROOT -q --packages=cmake,libuv1 --local-package-dir $LOCAL_PACKAGE_DIR --site=https://mirrors.kernel.org/sourceware/cygwin/ --no-desktop --no-startmenu --no-shortcuts --verbose
 
