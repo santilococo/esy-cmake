@@ -1,0 +1,20 @@
+ame: CI-windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:         
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
+      - name: Esy setup
+        run: |
+          esy install
+          esy bootstrap
+          esy build --verbosity=debug
+          
