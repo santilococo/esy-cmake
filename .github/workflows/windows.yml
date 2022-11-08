@@ -14,12 +14,7 @@ jobs:
           
       - name: Esy setup
         run: |
+          Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
           npm install -g esy@latest
-          npm install -g windows-build-tools@4.0.0
-          npm install -g node-gyp
-          node-gyp install 14.15.4
-          node install-node-deps.js
           esy install
-          esy bootstrap
-          esy build --verbosity=debug
           
