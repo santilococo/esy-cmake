@@ -1,4 +1,4 @@
-ame: CI-windows
+name: CI-windows
 
 on:
   workflow_dispatch:
