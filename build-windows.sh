@@ -18,7 +18,4 @@ else
     
     OUTPUT="$($cur__bin/cmake.exe --version)"
     echo "cmake version is: $OUTPUT"
-
-    echo "Checking cmake version (copied):"
-    strace $cur__bin/cmake.exe
 fi
